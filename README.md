@@ -1,5 +1,6 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+Сервис  Инндер предназначен для поиска попутчиков и планирования совместных поездок. 
+Сервис призван стать удобной альтернативой www.blablacar.ru, который теперь стал платным.
 
 # Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
