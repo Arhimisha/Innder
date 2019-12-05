@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div data-th-fragment="logoutFragment">
+    <form
+            data-th-if="${#authorization.expression('isAuthenticated()')}"
+            data-th-action="@{/logout}" method="post">
+        <button>Выйти</button>
+    </form>
+</div>
+<div data-th-fragment="registerFragment">
+    <a
+            data-th-if="${#authorization.expression('isAnonymous()')}"
+            data-th-href="@{/register}">Регистрация</a>
+</div>
+<div data-th-fragment="loginFragment">
+    <a data-th-if="${#authorization.expression('isAnonymous()')}"
+       data-th-href="@{/login}">Войти</a>
+</div>
+<div data-th-fragment="adminFragment">
+
+    <a data-th-if="${#authorization.expression('hasRole(''ADMIN'')')}"
+       data-th-href="@{/admin}">Панель управления</a>
+</div>
+</body>
+</html>

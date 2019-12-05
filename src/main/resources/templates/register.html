@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Регистрация</title>
+</head>
+<body>
+<!--  место для вывода ошибки -->
+<div data-th-if="error">
+    [[ ${error} ]]
+</div>
+<form data-th-action="@{/register}" method="post">
+    <input name="username" placeholder="Логин" required>
+    <input name="password" type="password" placeholder="Пароль" required>
+    <input name="confirm" type="password" placeholder="Подтверждение пароля" required>
+    <button>Регистрация</button>
+</form>
+</body>
+</html>
